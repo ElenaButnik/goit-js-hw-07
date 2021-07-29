@@ -20,11 +20,10 @@ function onInputBlur(event) {
    console.log(event.currentTarget.value.length);
    console.log(refs.input.dataset.length);
 
- if ((event.currentTarget.value.length) === Number(refs.input.dataset.length)) {
-        refs.input.classList.add('valid');
+ if ((event.currentTarget.value.length) !== Number(refs.input.dataset.length)) {
+        refs.input.classList.add('invalid');
     }
     else {
-        refs.input.classList.replace('valid', 'invalid');
+        refs.input.classList.replace('invalid', 'valid');
     }
 }
-
